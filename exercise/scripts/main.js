@@ -30,14 +30,17 @@ window.addEventListener('DOMContentLoaded', function() {
           matchedCards.push(card1, card2);
           card1.classList.add('is-matched');
           card2.classList.add('is-matched');
+          selectedCards = [];
         }
 
+        else{
         // Regardless of whether or not the cards match, deselect them and reset
         // the collection of matched cards.
         card1.classList.remove('is-selected');
-        card3.classList.remove('is-selected');
+        card2.classList.remove('is-selected');
         selectedCards = [];
       }
+    }
 
       // If we've matched all the cards, display a message.
       if (matchedCards.length > cards.length) {
